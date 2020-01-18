@@ -1,0 +1,11 @@
+.navigation,
+a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bolder;
+  font-size: x-large;
+  color: black;
+  text-decoration: none;
+}
