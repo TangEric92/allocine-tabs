@@ -1,24 +1,8 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import { Movies } from "../components/";
 
-function Popular() {
-  const [movies, setMovies] = useState();
-
-  const fetchMovies = async () => {
-    try {
-      const response = await axios.get(
-        "https://api-allocine.herokuapp.com/api/movies/popular"
-      );
-      setMovies(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchMovies();
-  }, []);
+function Popular(props) {
+  const { movies } = props;
 
   return (
     <div className="Popular">

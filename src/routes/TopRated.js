@@ -1,7 +1,14 @@
 import React from "react";
+import { Movies } from "../components/";
 
-function TopRated() {
-  return <div className="TopRated">Top rated</div>;
+function TopRated(props) {
+  const { movies } = props;
+
+  return (
+    <div className="top-rated">
+      {movies && <Movies movies={movies.results} />}
+    </div>
+  );
 }
 
 export default TopRated;

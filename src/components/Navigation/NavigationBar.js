@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import NavigationButton from "./NavigationButton";
 import "./navigation.css";
 
-const NavigationBar = () => {
-  const [currentPath, setCurrentPath] = useState("/popular");
+const NavigationBar = props => {
+  const { currentPath, setCurrentPath } = props;
 
   return (
     <nav className="navigation">
@@ -20,7 +20,7 @@ const NavigationBar = () => {
         currentPath={currentPath}
       />
       <NavigationButton
-        to="/top-rated"
+        to="/top_rated"
         name="Top Rated Movies"
         setCurrentPath={setCurrentPath}
         currentPath={currentPath}

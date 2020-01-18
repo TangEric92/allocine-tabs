@@ -1,7 +1,14 @@
 import React from "react";
+import { Movies } from "../components/";
 
-function UpComing() {
-  return <div className="UpComing">Upcoming</div>;
+function UpComing(props) {
+  const { movies } = props;
+
+  return (
+    <div className="top-rated">
+      {movies && <Movies movies={movies.results} />}
+    </div>
+  );
 }
 
 export default UpComing;
